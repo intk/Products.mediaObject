@@ -10,24 +10,6 @@
 
     <fieldset i18n:translate="collection" name="collection" label="Collection">
 
-      <field name="translated_title" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="Translated title">Translated title</title>
-      </field>
-
-      <field name="scientific_name" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="Scientific name">Scientific name</title>
-      </field>
-
-      <field name="book_title" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="booktitle">Title</title>
-      </field>
-
       <field name="artist" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -46,22 +28,28 @@
         <title i18n:translate="Illustrator">Illustrator</title>
       </field>
 
+      <field name="object_category" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Object category</title>
+      </field>
+
+      <field name="book_title" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="booktitle">Title</title>
+      </field>
+
+      <field name="translated_title" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Translated title">Translated title</title>
+      </field>
+
       <field name="object_type" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Objecttype">Objecttype</title>
-      </field>
-
-      <field name="object_category" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="Category">Category</title>
-      </field>
-
-      <field name="production_period" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="Production period">Production period</title>
       </field>
 
       <field name="dating" type="zope.schema.TextLine" indexer:searchable="true">
@@ -76,22 +64,28 @@
         <title i18n:translate=""> Dating</title>
       </field>
 
-      <field name="production_notes" type="zope.schema.TextLine" indexer:searchable="true">
+      <field name="production_period" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Production period">Production period</title>
+      </field>
+
+       <field name="production_notes" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Production notes">Production notes</title>
+      </field>
+
+      <field name="search_year" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Search year</title>
       </field>
 
       <field name="material" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Material">Material</title>
-      </field>
-
-      <field name="location" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="Location">Location</title>
       </field>
 
       <field name="technique" type="zope.schema.TextLine" indexer:searchable="true">
@@ -106,10 +100,40 @@
         <title i18n:translate="Measurements">Measurements</title>
       </field>
 
+      <field name="location" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Location">Location</title>
+      </field>
+
       <field name="publisher" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Publisher">Publisher</title>
+      </field>
+
+      <field name="common_name" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Common name</title>
+      </field>
+
+      <field name="scientific_name" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Scientific name">Scientific name</title>
+      </field>
+
+      <field name="chemical_composition" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Chemical composition</title>
+      </field>
+
+      <field name="field_coll_place" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Place where object is found</title>
       </field>
 
       <field name="object_number" type="zope.schema.TextLine" indexer:searchable="true">
@@ -118,10 +142,22 @@
         <title i18n:translate="Objectnumber">Objectnumber</title>
       </field>
 
-      <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
+      <field name="object_description" type="zope.schema.Text" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Digital reference</title>
+        <title i18n:translate="Description">Description</title>
+      </field>
+
+      <field name="inscription" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Inscription</title>
+      </field>
+
+      <field name="acquisition_source" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Origins</title>
       </field>
 
       <field name="credit_line" type="zope.schema.TextLine" indexer:searchable="true">
@@ -130,10 +166,16 @@
         <title i18n:translate="">Credit line</title>
       </field>
 
-      <field name="object_description" type="zope.schema.Text" indexer:searchable="true">
+      <field name="reproduction_reference" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="Description">Description</title>
+        <title i18n:translate="">Afbeelding uit Adlib</title>
+      </field>
+
+      <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Digital reference</title>
       </field>
 
       <field name="priref" type="zope.schema.TextLine"
@@ -148,43 +190,6 @@
         <required>False</required>
         <title i18n:translate="">Tags</title>
       </field>
-
-      <field name="acquisition_source" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Origins</title>
-      </field>
-
-      <field name="field_coll_place" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Place where object is found</title>
-      </field>
-
-      <field name="reproduction_reference" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Afbeelding uit Adlib</title>
-      </field>
-      
-      <field name="common_name" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Common name</title>
-      </field>
-
-      <field name="chemical_composition" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Chemical composition</title>
-      </field>
-
-      <field name="search_year" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Search year</title>
-      </field>
-
     </fieldset>
   </schema>
 </model>

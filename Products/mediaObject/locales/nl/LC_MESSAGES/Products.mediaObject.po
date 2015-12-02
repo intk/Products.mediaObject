@@ -94,6 +94,11 @@ msgstr "Auteur"
 msgid "Illustrator"
 msgstr "Illustrator"
 
+#: ../models/object.xml:23
+msgid "Object category"
+msgstr "Objectcategorie"
+
+
 
 #: ../models/object.xml:23
 msgid "Inscription"
@@ -162,6 +167,11 @@ msgstr "Bestel afbeelding"
 #: ../models/object.xml:48
 msgid "Search year"
 msgstr "Zoekjaar"
+
+#: ../models/object.xml:48
+msgid "Inscription"
+msgstr "Opschrift"
+
 
 
 
