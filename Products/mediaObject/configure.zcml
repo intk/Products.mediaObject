@@ -6,10 +6,12 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="Products.mediaObject">
+    i18n:domain="Products.mediaObject">
 
   <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
+
+  <include package="collective.z3cform.keywordwidget"/>
 
   <!-- Grok the package to initialize schema interfaces and content classes -->
   <grok:grok package="." />
@@ -28,10 +30,73 @@
       name="default"
       title="Object"
       directory="profiles/default"
-      description="Information about a collectible object used by museums"
+      description="Information about a collectible object"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+    
+  <browser:page
+        name="view"
+        title="Image View"
+        menu="plone_displayviews"
+        for="Products.mediaObject.object.IObject"
+        class="Products.mediaObject.object.ObjectView"
+        template="object_templates/view.pt"
+        permission="zope2.View"
+        />
+
+  <browser:page
+        name="drawing_view"
+        title="Drawing View"
+        menu="plone_displayviews"
+        for="Products.mediaObject.object.IObject"
+        class="Products.mediaObject.object.ObjectView"
+        template="object_templates/drawing_view.pt"
+        permission="zope2.View"
+        />
+
+  <browser:page
+        name="double_view"
+        title="Double Image View"
+        menu="plone_displayviews"
+        for="Products.mediaObject.object.IObject"
+        class="Products.mediaObject.object.ObjectView"
+        template="object_templates/double_view.pt"
+        permission="zope2.View"
+        />
+
+  <browser:page
+        name="book_view"
+        title="Book View"
+        menu="plone_displayviews"
+        for="Products.mediaObject.object.IObject"
+        class="Products.mediaObject.object.ObjectView"
+        template="object_templates/book_view.pt"
+        permission="zope2.View"
+        />
+
+  <browser:page
+        name="instruments_view"
+        title="Instrument View"
+        menu="plone_displayviews"
+        for="Products.mediaObject.object.IObject"
+        class="Products.mediaObject.object.ObjectView"
+        template="object_templates/instrument_view.pt"
+        permission="zope2.View"
+        />
+
+  <browser:page
+        name="multiple_view"
+        title="Multiple Image View"
+        menu="plone_displayviews"
+        for="Products.mediaObject.object.IObject"
+        class="Products.mediaObject.object.ObjectView"
+        template="object_templates/multiple_view.pt"
+        permission="zope2.View"
+        />
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <adapter name="object_type" factory=".indexers.object_type" />
+  <adapter name="material" factory=".indexers.material" />
+  <adapter name="technique" factory=".indexers.technique" />
 </configure>

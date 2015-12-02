@@ -6,7 +6,7 @@
   <!-- Basic metadata -->
   <property name="title" i18n:translate="Object">Object</property>
   <property name="description"
-    i18n:translate="">Information about a collectible object used by museums</property>
+    i18n:translate="Collectible_object">Information about a collectible object</property>
   <property name="icon_expr"></property>
   <property name="factory">Products.mediaObject.object</property>
   <property name="global_allow">True</property>
@@ -28,7 +28,9 @@
   <property name="immediate_view">view</property>
   <property name="default_view">view</property>
   <property name="view_methods">
-   <element value="view"/>
+   <element value="view" i18n:translate="Image View"/>
+   <element value="double_view" i18n:translate="Double Image View"/>
+   <element value="multiple_view" i18n:translate="Multiple Image View"/>
   </property>
   <property name="default_view_fallback">False</property>
   <property name="add_permission">cmf.AddPortalContent</property>

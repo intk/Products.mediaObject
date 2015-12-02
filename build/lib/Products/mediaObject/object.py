@@ -22,7 +22,7 @@ from Products.mediaObject import MessageFactory as _
 
 class IObject(form.Schema, IImageScaleTraversable):
     """
-    Information about a collectible object used by museums
+    Information about a collectible object
     """
 
     # If you want a schema-defined interface, delete the model.load
