@@ -99,4 +99,7 @@
   <adapter name="object_type" factory=".indexers.object_type" />
   <adapter name="material" factory=".indexers.material" />
   <adapter name="technique" factory=".indexers.technique" />
+  <adapter name="maker" factory=".indexers.maker" />
+  <adapter name="object_priref" factory=".indexers.object_priref" />
+  
 </configure>

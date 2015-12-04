@@ -2,6 +2,12 @@
 <model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns="http://namespaces.plone.org/supermodel/schema" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" i18n:domain="Products.mediaObject">
   <!-- To make the fields searchable use collective.dexterity.behaviour -->
   <schema>
+    <field name="priref" type="zope.schema.TextLine" indexer:searchable="true">
+      <description/>
+      <required>True</required>
+      <title>priref</title>
+    </field>
+
     <field name="text" type="plone.app.textfield.RichText" indexer:searchable="true">
       <description i18n:translate="Description">Description</description>
       <required>False</required>
@@ -9,11 +15,26 @@
     </field>
 
     <fieldset i18n:translate="collection" name="collection" label="Collection">
+      <field name="administration_name" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Administration name">Administration name</title>
+      </field>
 
       <field name="artist" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Artist">Artist</title>
+      </field>
+
+      <field name="creator" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Artist">Artist</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IArtist</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="author" type="zope.schema.TextLine" indexer:searchable="true">
@@ -55,7 +76,17 @@
       <field name="dating" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
+        <title i18n:translate="">Dating</title>
+      </field>
+
+      <field name="object_dating" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
         <title i18n:translate="Dating">Dating</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IDating</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="fossil_dating" type="zope.schema.TextLine" indexer:searchable="true">
@@ -67,7 +98,17 @@
       <field name="production_period" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
+        <title i18n:translate="">Production period</title>
+      </field>
+
+      <field name="object_production_period" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
         <title i18n:translate="Production period">Production period</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IProductionPeriod</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
        <field name="production_notes" type="zope.schema.TextLine" indexer:searchable="true">
@@ -94,10 +135,20 @@
         <title i18n:translate="Technique">Technique</title>
       </field>
 
-      <field name="dimension" type="zope.schema.Text" indexer:searchable="true">
+      <field name="dimension" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Measurements">Measurements</title>
+      </field>
+
+      <field name="object_dimension" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Measurements">Measurements</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IDimensions</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="location" type="zope.schema.TextLine" indexer:searchable="true">
@@ -142,16 +193,36 @@
         <title i18n:translate="Objectnumber">Objectnumber</title>
       </field>
 
-      <field name="object_description" type="zope.schema.Text" indexer:searchable="true">
+      <field name="object_description" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Description">Description</title>
       </field>
 
+      <field name="object_descriptions" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Description">Description</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IDescription</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
+      </field>
+
       <field name="inscription" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Inscription</title>
+        <title i18n:translate="Inscription">Inscription</title>
+      </field>
+
+      <field name="object_inscription" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Inscription">Inscription</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IInscription</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="acquisition_source" type="zope.schema.TextLine" indexer:searchable="true">
@@ -169,20 +240,23 @@
       <field name="reproduction_reference" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Afbeelding uit Adlib</title>
+        <title i18n:translate="">Reproduction reference</title>
+      </field>
+
+      <field name="object_reproduction_reference" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Reproduction reference</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IReproductionReference</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="">Digital reference</title>
-      </field>
-
-      <field name="priref" type="zope.schema.TextLine"
-      	form:omitted="z3c.form.interfaces.IForm:true z3c.form.interfaces.IEditForm:true">
-        <description/>
-        <required>False</required>
-        <title>priref</title>
       </field>
 
       <field name="object_tags" type="zope.schema.TextLine" indexer:searchable="true">

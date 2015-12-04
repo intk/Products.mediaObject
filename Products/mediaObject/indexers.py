@@ -53,6 +53,15 @@ def object_number(object, **kw):
         return ""
 
 @indexer(IObject)
+def object_priref(object, **kw):
+    try:
+        if hasattr(object, 'priref'):
+            return object.priref
+        return ""
+    except:
+        return ""
+
+@indexer(IObject)
 def maker(object, **kw):
     try:
         terms = []
