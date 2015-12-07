@@ -48,8 +48,17 @@ class IObject(form.Schema, IImageScaleTraversable):
 class Object(Container):
     grok.implements(IObject)
 
-    # Add your class methods and properties here
-    pass
+    @property
+    def object_title(self):
+        ''' return title '''
+        return self.title
+
+    @object_title.setter
+    def object_title(self, value):
+        try:
+            self.object_title = self.title
+        except:
+            pass
 
 
 # View class

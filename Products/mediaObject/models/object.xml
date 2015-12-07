@@ -61,6 +61,12 @@
         <title i18n:translate="booktitle">Title</title>
       </field>
 
+      <field name="object_title" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="booktitle">Title</title>
+      </field>
+
       <field name="translated_title" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -246,7 +252,7 @@
       <field name="object_reproduction_reference" type="zope.schema.List" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Reproduction reference</title>
+        <title i18n:translate="label_reproduction_reference">Reproduction reference</title>
         <value_type type="collective.z3cform.datagridfield.DictRow">
           <schema>Products.mediaObject.interfaces.IReproductionReference</schema>
         </value_type>
