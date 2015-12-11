@@ -24,8 +24,8 @@ class IArtist(Interface):
 	date_of_death = schema.TextLine(title=_(u'Date of death'), required=False)
 
 class IProductionPeriod(Interface):
-	period = schema.TextLine(title=_(u'Period'), required=False)
 	place = schema.TextLine(title=_(u'Place'), required=False)
+	period = schema.TextLine(title=_(u'Period'), required=False)
 	reason = schema.TextLine(title=_(u'Reason'), required=False)
 	notes = schema.TextLine(title=_(u'Notes'), required=False)
 

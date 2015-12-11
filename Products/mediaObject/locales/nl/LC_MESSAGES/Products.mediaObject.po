@@ -48,7 +48,7 @@ msgstr "Beschrijving"
 
 #: ../models/object.xml:29
 msgid "Production period"
-msgstr "Vervaardiging periode"
+msgstr "Periode"
 
 #: ../models/object.xml:24
 msgid "Translated title"
