@@ -187,11 +187,7 @@
         <title i18n:translate="">Chemical composition</title>
       </field>
 
-      <field name="field_coll_place" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Place where object is found</title>
-      </field>
+      
 
       <field name="object_number" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
@@ -235,6 +231,12 @@
         <description/>
         <required>False</required>
         <title i18n:translate="">Origins</title>
+      </field>
+
+      <field name="field_coll_place" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Place where object is found</title>
       </field>
 
       <field name="credit_line" type="zope.schema.TextLine" indexer:searchable="true">
