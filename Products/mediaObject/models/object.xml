@@ -110,7 +110,7 @@
       <field name="object_production_period" type="zope.schema.List" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="Production period">Production period</title>
+        <title i18n:translate="">Production period</title>
         <value_type type="collective.z3cform.datagridfield.DictRow">
           <schema>Products.mediaObject.interfaces.IProductionPeriod</schema>
         </value_type>
