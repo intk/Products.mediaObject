@@ -45,6 +45,10 @@ class IDimensions(Interface):
 class IDescription(Interface):
 	description = schema.TextLine(title=_(u'Description'), required=False)
 
+class IMaterial(Interface):
+	material = schema.TextLine(title=_(u'Material'), required=False)
+
+
 class IInscription(Interface):
 	type = schema.TextLine(title=_(u'Type'), required=False)
 	content = schema.TextLine(title=_(u'Content'), required=False)

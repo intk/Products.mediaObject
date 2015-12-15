@@ -135,6 +135,16 @@
         <title i18n:translate="Material">Material</title>
       </field>
 
+      <field name="object_material" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Material">Material</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IMaterial</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
+      </field>
+
       <field name="technique" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
