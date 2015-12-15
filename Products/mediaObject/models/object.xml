@@ -43,6 +43,16 @@
         <title i18n:translate="Author">Author</title>
       </field>
 
+      <field name="object_author" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Author">Author</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IArtist</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
+      </field>
+
       <field name="illustrator" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -196,7 +206,6 @@
         <required>False</required>
         <title i18n:translate="">Chemical composition</title>
       </field>
-
       
 
       <field name="object_number" type="zope.schema.TextLine" indexer:searchable="true">
@@ -274,7 +283,17 @@
       <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Digital reference</title>
+        <title i18n:translate="">Browse through book</title>
+      </field>
+
+      <field name="object_digital_reference" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Browse through book</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.IDigitalReference</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="object_tags" type="zope.schema.TextLine" indexer:searchable="true">

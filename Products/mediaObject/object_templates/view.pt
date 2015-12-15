@@ -40,25 +40,7 @@
 
     <div class="container object-container">
       <div class="object-fieldset">
-        <fieldset tal:repeat="group view/groups"
-                  tal:attributes="id python:''.join((group.prefix, 'groups.', group.__name__)).replace('.', '-')">
-            
-            <tal:block tal:repeat="widget group/widgets/values">
-
-                <tal:contentfield tal:condition="widget/value">
-                  <tal:showfield tal:condition="python: widget.value != '' and widget.value != None and widget.value != ' '">
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 object-label" style="padding-left:0px;" tal:condition="python:widget.__name__ not in ('object_tags')">
-                      <span tal:content="widget/label"></span>
-                    </div>
-
-                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 object-value" tal:condition="python:widget.__name__ not in ('object_tags')">
-                      <p tal:condition="python:widget.__name__ in ('object_type', 'material', 'technique', 'artist')"><a tal:attributes="href python:'/'+context.language+'/search?SearchableText='+widget.value" tal:content="widget/value"></a></p>
-                      <p tal:condition="python:widget.__name__ not in ('object_type', 'material', 'technique', 'artist', 'object_tags')" tal:content="widget/value"></p>
-                    </div>
-                  </tal:showfield>
-                </tal:contentfield>
-            </tal:block>
-        </fieldset>
+        
       </div>
       <p>
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 object-label" style="padding-left:0px;padding-top:20px;">

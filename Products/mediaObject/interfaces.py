@@ -55,3 +55,8 @@ class IInscription(Interface):
 
 class IReproductionReference(Interface):
 	reference = schema.TextLine(title=_(u'Reproduction reference'), required=False)
+
+class IDigitalReference(Interface):
+	reference = schema.TextLine(title=_(u'Reference'), required=False)
+	description = schema.TextLine(title=_(u'Description'), required=False)
+	

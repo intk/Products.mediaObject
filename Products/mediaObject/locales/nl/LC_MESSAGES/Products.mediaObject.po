@@ -113,6 +113,11 @@ msgid "Digital reference"
 msgstr "Bladerboek"
 
 #: ../models/object.xml:28
+msgid "Digital reference"
+msgstr "Browse through book"
+
+
+#: ../models/object.xml:28
 msgid " Dating"
 msgstr "Precisie"
 
