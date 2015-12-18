@@ -44,7 +44,7 @@
       </div>
       <p>
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 object-label" style="padding-left:0px;padding-top:20px;">
-        <a class="buy-item" style="cursor:pointer;"><p i18n:translate="Order image">Bestel afbeelding</p></a>
+        <a class="buy-item" style="cursor:pointer;"><p i18n:translate="">Order image</p></a>
       </div>
       
     </div>

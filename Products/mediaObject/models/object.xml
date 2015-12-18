@@ -24,13 +24,13 @@
       <field name="artist" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="Artist">Artist</title>
+        <title i18n:translate="">Creator</title>
       </field>
 
       <field name="creator" type="zope.schema.List" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="Artist">Artist</title>
+        <title i18n:translate="">Creator</title>
         <value_type type="collective.z3cform.datagridfield.DictRow">
           <schema>Products.mediaObject.interfaces.IArtist</schema>
         </value_type>
@@ -86,7 +86,7 @@
       <field name="object_type" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="Objecttype">Objecttype</title>
+        <title i18n:translate="">Object type</title>
       </field>
 
       <field name="dating" type="zope.schema.TextLine" indexer:searchable="true">
@@ -114,13 +114,13 @@
       <field name="production_period" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Production period</title>
+        <title i18n:translate="">Period</title>
       </field>
 
       <field name="object_production_period" type="zope.schema.List" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Production period</title>
+        <title i18n:translate="">Period</title>
         <value_type type="collective.z3cform.datagridfield.DictRow">
           <schema>Products.mediaObject.interfaces.IProductionPeriod</schema>
         </value_type>
@@ -211,7 +211,7 @@
       <field name="object_number" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="Objectnumber">Objectnumber</title>
+        <title i18n:translate="">Object number</title>
       </field>
 
       <field name="object_description" type="zope.schema.TextLine" indexer:searchable="true">

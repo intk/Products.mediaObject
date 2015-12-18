@@ -50,6 +50,10 @@ msgstr "Beschrijving"
 msgid "Production period"
 msgstr "Periode"
 
+#: ../models/object.xml:29
+msgid "Period"
+msgstr "Periode"
+
 #: ../models/object.xml:24
 msgid "Translated title"
 msgstr "Vertaalde titel"
@@ -78,12 +82,24 @@ msgstr "Collectie"
 msgid "Objecttype"
 msgstr "Objectnaam"
 
+#: ../models/object.xml:18
+msgid "Object type"
+msgstr "Objectnaam"
+
 #: ../models/object.xml:13
 msgid "Objectnumber"
 msgstr "Objectnummer"
 
+#: ../models/object.xml:13
+msgid "Object number"
+msgstr "Objectnummer"
+
 #: ../models/object.xml:23
 msgid "Artist"
+msgstr "Vervaardiger"
+
+#: ../models/object.xml:23
+msgid "Creator"
 msgstr "Vervaardiger"
 
 #: ../models/object.xml:23
@@ -179,6 +195,5 @@ msgstr "Opschrift"
 #: ../models/object.xml:48
 msgid "label_reproduction_reference"
 msgstr "Opschrift"
-
 
 
