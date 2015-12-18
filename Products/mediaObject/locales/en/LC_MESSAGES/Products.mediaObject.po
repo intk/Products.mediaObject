@@ -1,0 +1,4 @@
+#: ../models/object.xml:24
+msgid "booktitle"
+msgstr "Title"
+

@@ -99,7 +99,6 @@ msgid "Object category"
 msgstr "Objectcategorie"
 
 
-
 #: ../models/object.xml:23
 msgid "Inscription"
 msgstr "Opschrift"
