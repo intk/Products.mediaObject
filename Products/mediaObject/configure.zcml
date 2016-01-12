@@ -97,9 +97,11 @@
   <!-- -*- extra stuff goes here -*- -->
 
   <adapter name="object_type" factory=".indexers.object_type" />
-  <adapter name="material" factory=".indexers.material" />
-  <adapter name="technique" factory=".indexers.technique" />
-  <adapter name="maker" factory=".indexers.maker" />
+  <adapter name="object_material" factory=".indexers.object_material" />
+  <adapter name="object_technique" factory=".indexers.object_technique" />
+  <adapter name="object_creator" factory=".indexers.object_creator" />
   <adapter name="object_priref" factory=".indexers.object_priref" />
+  <adapter name="object_collection" factory=".indexers.object_collection" />
+  <adapter name="objectnumber" factory=".indexers.objectnumber" />
   
 </configure>

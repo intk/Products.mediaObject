@@ -196,4 +196,9 @@ msgstr "Opschrift"
 msgid "label_reproduction_reference"
 msgstr "Opschrift"
 
+#: ../models/object.xml:48
+msgid "stable uri"
+msgstr "Stabiele uri"
+
+
 

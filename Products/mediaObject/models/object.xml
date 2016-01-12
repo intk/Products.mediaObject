@@ -15,10 +15,17 @@
     </field>
 
     <fieldset i18n:translate="collection" name="collection" label="Collection">
+
       <field name="administration_name" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="Administration name">Administration name</title>
+      </field>
+
+      <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Browse through book</title>
       </field>
 
       <field name="artist" type="zope.schema.TextLine" indexer:searchable="true">
@@ -280,12 +287,6 @@
         <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
-      <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="">Browse through book</title>
-      </field>
-
       <field name="object_digital_reference" type="zope.schema.List" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -300,6 +301,12 @@
         <description/>
         <required>False</required>
         <title i18n:translate="">Tags</title>
+      </field>
+
+      <field name="stable_uri" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">stable uri</title>
       </field>
     </fieldset>
   </schema>

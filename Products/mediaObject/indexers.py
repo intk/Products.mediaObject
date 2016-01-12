@@ -17,19 +17,20 @@ def object_type(object, **kw):
         return ""
 
 @indexer(IObject)
-def material(object, **kw):
+def object_material(object, **kw):
     try:
         terms = []
-        if hasattr(object, 'material'):
-            if object.material:
-                terms.append(object.material) 
+        if hasattr(object, 'object_material'):
+            for material in object.object_material:
+                if material['material']:
+                    terms.append(material['material'])
         
         return " ".join(terms)
     except:
         return ""
 
 @indexer(IObject)
-def technique(object, **kw):
+def object_technique(object, **kw):
     try:
         terms = []
         if hasattr(object, 'technique'):
@@ -53,25 +54,54 @@ def object_number(object, **kw):
         return ""
 
 @indexer(IObject)
+def object_collection(object, **kw):
+    try:
+        terms = []
+        if hasattr(object, 'administration_name'):
+            if object.administration_name:
+                terms.append(object.administration_name) 
+        
+        return " ".join(terms)
+    except:
+        return ""
+
+@indexer(IObject)
+def objectnumber(object, **kw):
+    try:
+        terms = []
+        if hasattr(object, 'object_number'):
+            if object.object_number:
+                terms.append(object.object_number) 
+        
+        return terms
+    except:
+        return ""
+
+@indexer(IObject)
 def object_priref(object, **kw):
     try:
         if hasattr(object, 'priref'):
-            return object.priref
+            if object.priref != None:
+                return str(object.priref)
+            else:
+                return ""
         return ""
     except:
         return ""
 
 @indexer(IObject)
-def maker(object, **kw):
+def object_creator(object, **kw):
     try:
         terms = []
-        if hasattr(object, 'artist'):
-            if object.artist:
-                terms.append(object.artist) 
+        if hasattr(object, 'creator'):
+            for creator in object.creator:
+                if creator['creator']:
+                    terms.append(creator['creator']) 
 
-        if hasattr(object, 'author'):
-            if object.author:
-                terms.append(object.author) 
+        if hasattr(object, 'object_author'):
+            for author in object.object_author:
+                if author['creator']:
+                    terms.append(author['creator']) 
         
         return " ".join(terms)
     except:
