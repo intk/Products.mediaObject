@@ -22,6 +22,9 @@ from Products.CMFPlone.PloneBatch import Batch
 from Products.CMFCore.utils import getToolByName
 from collective.leadmedia.interfaces import ICanContainMedia
 from zope.schema import getFieldsInOrder
+from collective import dexteritytextindexer
+from zope.component import adapts
+from zope.interface import implements
 
 import datetime
 

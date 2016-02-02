@@ -200,5 +200,11 @@ msgstr "Opschrift"
 msgid "stable uri"
 msgstr "Stabiele uri"
 
+#: ../object.py
+msgid 'Place of production'
+msgstr 'Productieplaats'
+
+
+
 
 

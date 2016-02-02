@@ -22,6 +22,12 @@
         <title i18n:translate="Administration name">Administration name</title>
       </field>
 
+      <field name="object_title" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="booktitle">Title</title>
+      </field>
+
       <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -73,12 +79,6 @@
       </field>
 
       <field name="book_title" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="booktitle">Title</title>
-      </field>
-
-      <field name="object_title" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
         <title i18n:translate="booktitle">Title</title>
