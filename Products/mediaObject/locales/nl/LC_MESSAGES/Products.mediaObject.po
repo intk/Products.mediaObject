@@ -131,6 +131,9 @@ msgstr "Bladerboek"
 msgid "Digital reference"
 msgstr "Browse through book"
 
+#: ../models/object.xml:28
+msgid "Browse through book"
+msgstr "Blader door boek"
 
 #: ../models/object.xml:28
 msgid " Dating"
