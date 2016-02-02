@@ -168,6 +168,16 @@
         <title i18n:translate="Technique">Technique</title>
       </field>
 
+      <field name="object_technique" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="Technique">Technique</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.ITechnique</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
+      </field>
+
       <field name="dimension" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>

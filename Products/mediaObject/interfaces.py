@@ -48,6 +48,8 @@ class IDescription(Interface):
 class IMaterial(Interface):
 	material = schema.TextLine(title=_(u'Material'), required=False)
 
+class ITechnique(Interface):
+	technique = schema.TextLine(title=_(u'Technique'), required=False)
 
 class IInscription(Interface):
 	type = schema.TextLine(title=_(u'Type'), required=False)
