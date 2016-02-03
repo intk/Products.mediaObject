@@ -28,6 +28,12 @@
         <title i18n:translate="booktitle">Title</title>
       </field>
 
+      <field name="translated_title" type="zope.schema.TextLine" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate=" "> </title>
+      </field>
+
       <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -94,11 +100,7 @@
         <title i18n:translate="booktitle">Title</title>
       </field>
 
-      <field name="translated_title" type="zope.schema.TextLine" indexer:searchable="true">
-        <description/>
-        <required>False</required>
-        <title i18n:translate="Translated title">Translated title</title>
-      </field>
+      
 
       <field name="object_type" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
