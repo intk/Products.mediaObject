@@ -208,6 +208,8 @@ msgid 'Place of production'
 msgstr 'Productieplaats'
 
 
-
+#: ../object.py
+msgid 'People/event(s) involved'
+msgstr 'Betrokkene(n)'
 
 
