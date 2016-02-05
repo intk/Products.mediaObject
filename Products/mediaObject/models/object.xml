@@ -59,7 +59,7 @@
       <field name="creator" type="zope.schema.List" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">People/event(s) involved</title>
+        <title i18n:translate="">Creator</title>
         <value_type type="collective.z3cform.datagridfield.DictRow">
           <schema>Products.mediaObject.interfaces.IArtist</schema>
         </value_type>
