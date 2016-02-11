@@ -51,7 +51,7 @@ class IObject(form.Schema, IImageScaleTraversable):
 class Object(Container):
     grok.implements(IObject)
 
-    """@property
+    @property
     def object_title(self):
         ''' return title '''
         return self.title
@@ -61,7 +61,7 @@ class Object(Container):
         try:
             self.object_title = self.title
         except:
-            pass"""
+            pass
 
 
 # View class
