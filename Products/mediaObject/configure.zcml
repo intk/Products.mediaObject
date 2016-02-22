@@ -104,4 +104,8 @@
   <adapter name="object_collection" factory=".indexers.object_collection" />
   <adapter name="objectnumber" factory=".indexers.objectnumber" />
   
+  <adapter name="product_stock" factory=".indexers.product_stock" />
+  <adapter name="product_articleNumber" factory=".indexers.product_articleNumber" />
+  
+  
 </configure>

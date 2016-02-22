@@ -1,6 +1,32 @@
 from plone.indexer.decorator import indexer
 from .object import IObject
 
+from bda.plone.shop.dx import IStockBehavior
+from bda.plone.shop.dx import ITradingBehavior
+
+@indexer(IStockBehavior)
+def product_stock(object, **kw):
+    print "product stock"
+    try:
+        if hasattr(object, 'item_available'):
+            return object.item_available
+        else:
+            return ""
+    except:
+        return ""
+
+@indexer(ITradingBehavior)
+def product_articleNumber(object, **kw):
+    print "product article number"
+    try:
+        if hasattr(object, 'item_number'):
+            return object.item_number
+        else:
+            return ""
+    except:
+        return ""
+
+
 @indexer(IObject)
 def object_type(object, **kw):
     try:
