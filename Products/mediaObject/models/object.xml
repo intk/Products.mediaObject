@@ -238,7 +238,6 @@
         <title i18n:translate="">Chemical composition</title>
       </field>
       
-
       <field name="object_number" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -315,6 +314,16 @@
         <description/>
         <required>False</required>
         <title i18n:translate="">Tags</title>
+      </field>
+
+      <field name="copyrights" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="">Copyrights</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.ICopyrights</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="stable_uri" type="zope.schema.TextLine" indexer:searchable="true">
