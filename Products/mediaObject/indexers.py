@@ -44,6 +44,7 @@ def product_price(object, **kw):
             return ""
     else:
         return ""
+        
 
 @indexer(ITradingBehavior)
 def product_articleNumber(object, **kw):
