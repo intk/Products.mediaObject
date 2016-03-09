@@ -106,6 +106,6 @@
   
   <adapter name="product_stock" factory=".indexers.product_stock" />
   <adapter name="product_articleNumber" factory=".indexers.product_articleNumber" />
-  
+  <adapter name="product_price" factory=".indexers.product_price" />
   
 </configure>

@@ -1,27 +1,61 @@
 from plone.indexer.decorator import indexer
 from .object import IObject
+from decimal import Decimal
 
-from bda.plone.shop.dx import IStockBehavior
-from bda.plone.shop.dx import ITradingBehavior
+SHOP_AVAILABLE = True
+try:
+    from bda.plone.cart import get_item_data_provider
+    from bda.plone.shop.dx import IStockBehavior
+    from bda.plone.shop.dx import ITradingBehavior
+    from bda.plone.shop.dx import IBuyableBehavior
+except ImportError:
+    SHOP_AVAILABLE = False
+
 
 @indexer(IStockBehavior)
 def product_stock(object, **kw):
-    try:
-        if hasattr(object, 'item_available'):
-            return object.item_available
-        else:
+    if SHOP_AVAILABLE:
+        try:
+            if hasattr(object, 'item_available'):
+                return object.item_available
+            else:
+                return ""
+        except:
             return ""
-    except:
+    else:
+        return ""
+
+@indexer(IBuyableBehavior)
+def product_price(object, **kw):
+    if SHOP_AVAILABLE:
+        try:
+            item_data = get_item_data_provider(object)
+            net_price = Decimal(item_data.net)
+            vat = item_data.vat
+            if vat % 2 != 0:
+                item_vat = Decimal(vat).quantize(Decimal('1.0'))
+            else:
+                item_vat = Decimal(vat)
+            
+            gross_price = net_price + net_price / Decimal(100) * item_vat
+            gross_final = gross_price.quantize(Decimal('1.0'))
+            return str(gross_final)
+        except:
+            return ""
+    else:
         return ""
 
 @indexer(ITradingBehavior)
 def product_articleNumber(object, **kw):
-    try:
-        if hasattr(object, 'item_number'):
-            return object.item_number
-        else:
+    if SHOP_AVAILABLE:
+        try:
+            if hasattr(object, 'item_number'):
+                return object.item_number
+            else:
+                return ""
+        except:
             return ""
-    except:
+    else:
         return ""
 
 
