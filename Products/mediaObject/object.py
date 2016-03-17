@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from five import grok
 
 from z3c.form import group, field
@@ -89,8 +92,15 @@ class ObjectView(DefaultView):
 
         obj = ICanContainMedia(item)
 
+        title = item.Title()
+        copyrights = getattr(item, 'copyrights', None)
+
+        if copyrights:
+            if len(copyrights) > 0:
+                title = "%s %s" %(title, "©")
+
         details = {}
-        details["title"] = item.Title()
+        details["title"] = title
         details["type"] = "article"
         details["site_name"] = "Teylers Museum"
         details["url"] = item.absolute_url()

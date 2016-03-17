@@ -319,7 +319,7 @@
       <field name="copyrights" type="zope.schema.List" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate="">Copyrights</title>
+        <title i18n:translate="">Copyright</title>
         <value_type type="collective.z3cform.datagridfield.DictRow">
           <schema>Products.mediaObject.interfaces.ICopyrights</schema>
         </value_type>

@@ -63,7 +63,7 @@ class IDigitalReference(Interface):
 	description = schema.TextLine(title=_(u'Description'), required=False)
 	
 class ICopyrights(Interface):
-	copyrights = schema.TextLine(title=_(u'Copyrights'), required=False)
+	copyrights = schema.TextLine(title=_(u'Copyright'), required=False)
 
 
 	
