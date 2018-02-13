@@ -23,6 +23,10 @@ class IArtist(Interface):
 	date_of_birth = schema.TextLine(title=_(u'Date of birth'), required=False)
 	date_of_death = schema.TextLine(title=_(u'Date of death'), required=False)
 
+
+class ITitle(Interface):
+	title = schema.TextLine(title=_(u'Title'), required=False)
+
 class IProductionPeriod(Interface):
 	place = schema.TextLine(title=_(u'Place'), required=False)
 	period = schema.TextLine(title=_(u'Period'), required=False)

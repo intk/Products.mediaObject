@@ -2,7 +2,7 @@
 <model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns="http://namespaces.plone.org/supermodel/schema" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" i18n:domain="Products.mediaObject">
   <!-- To make the fields searchable use collective.dexterity.behaviour -->
   <schema>
-    <field name="priref" type="zope.schema.TextLine" indexer:searchable="true">
+    <field name="priref" type="zope.schema.TextLine">
       <description/>
       <required>True</required>
       <title>priref</title>
@@ -15,7 +15,6 @@
     </field>
 
     <fieldset i18n:translate="collection" name="collection" label="Collection">
-
       <field name="administration_name" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
@@ -25,7 +24,18 @@
       <field name="object_title" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
+
         <title i18n:translate="booktitle">Title</title>
+      </field>
+
+      <field name="object_titles" type="zope.schema.List" indexer:searchable="true">
+        <description/>
+        <required>False</required>
+        <title i18n:translate="title">Title</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>Products.mediaObject.interfaces.ITitle</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
 
       <field name="book_title" type="zope.schema.TextLine" indexer:searchable="true">
@@ -37,7 +47,7 @@
       <field name="translated_title" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
         <required>False</required>
-        <title i18n:translate=" "> </title>
+        <title i18n:translate="">Translated title</title>
       </field>
 
       <field name="digital_reference" type="zope.schema.Text" indexer:searchable="true">
@@ -99,10 +109,6 @@
         <required>False</required>
         <title i18n:translate="">Object category</title>
       </field>
-
-      
-
-      
 
       <field name="object_type" type="zope.schema.TextLine" indexer:searchable="true">
         <description/>
